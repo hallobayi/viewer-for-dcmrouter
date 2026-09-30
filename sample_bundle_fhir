@@ -1,0 +1,81 @@
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        {
+            "resource": {
+                "resourceType": "Patient",
+                "id": "P-100200300",
+                "identifier": [
+                    {
+                        "use": "official",
+                        "system": "https://fhir.kemkes.go.id/id/nik",
+                        "value": "3174031002890009"
+                    }
+                ],
+                "active": true,
+                "name": [
+                    {
+                        "use": "official",
+                        "text": "Budi Santoso"
+                    }
+                ],
+                "gender": "male",
+                "birthDate": "1980-05-20"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "ServiceRequest",
+                "id": "SR-555666777",
+                "identifier": [
+                    {
+                        "system": "http://sys-ids.kemkes.go.id/acsn",
+                        "value": "ACC-20260929-001"
+                    }
+                ],
+                "intent": "order",
+                "status": "active",
+                "category": [
+                    {
+                        "coding": [
+                            {
+                                "code": "DX",
+                                "display": "Digital Radiography"
+                            }
+                        ]
+                    }
+                ],
+                "locationCode": [
+                    {
+                        "coding": [
+                            {
+                                "code": "XRAY-DX",
+                                "display": "Mesin X-Ray 1"
+                            }
+                        ]
+                    }
+                ],
+                "subject": {
+                    "reference": "Patient/P-100200300",
+                    "display": "Budi Santoso"
+                },
+                "requester": {
+                    "reference": "Practitioner/DR-001",
+                    "display": "dr. Hendrik Salim, Sp.PD"
+                },
+                "code": {
+                    "coding": [
+                        {
+                            "code": "85069-3",
+                            "display": "CR X-Ray Thorax AP / PA",
+                            "system": "http://loinc.org"
+                        }
+                    ],
+                    "text": "CR X-Ray Thorax AP / PA"
+                },
+                "occurrenceDateTime": "2026-09-29T08:30:00+07:00"
+            }
+        }
+    ]
+}
