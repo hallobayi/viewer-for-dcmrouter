@@ -5,7 +5,7 @@
         {
             "resource": {
                 "resourceType": "Patient",
-                "id": "P-100200300",
+                "id": "P00999983243",
                 "identifier": [
                     {
                         "use": "official",
@@ -17,11 +17,49 @@
                 "name": [
                     {
                         "use": "official",
-                        "text": "Budi Santoso"
+                        "text": "ALICIA CHRISTIE TAN"
                     }
                 ],
-                "gender": "male",
-                "birthDate": "1980-05-20"
+                "gender": "female",
+                "birthDate": "1990-01-01"
+            }
+        },
+        {
+            "resource": {
+                "resourceType": "Encounter",
+                "id": "ENC-0012345",
+                "status": "arrived",
+                "class": {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "code": "AMB",
+                    "display": "ambulatory"
+                },
+                "subject": {
+                    "reference": "Patient/P00999983243",
+                    "display": "ALICIA CHRISTIE TAN"
+                },
+                "participant": [
+                    {
+                        "type": [
+                            {
+                                "coding": [
+                                    {
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                                        "code": "ATND",
+                                        "display": "attender"
+                                    }
+                                ]
+                            }
+                        ],
+                        "individual": {
+                            "reference": "Practitioner/10016286016",
+                            "display": "dr. Hendrik Salim, Sp.PD"
+                        }
+                    }
+                ],
+                "period": {
+                    "start": "2026-09-30T08:00:00+07:00"
+                }
             }
         },
         {
@@ -31,11 +69,12 @@
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/acsn",
-                        "value": "ACC-20260929-001"
+                        "value": "ACC-20260930-001"
                     }
                 ],
                 "intent": "order",
                 "status": "active",
+                "priority": "routine",
                 "category": [
                     {
                         "coding": [
@@ -44,6 +83,34 @@
                                 "display": "Digital Radiography"
                             }
                         ]
+                    }
+                ],
+                "code": {
+                    "coding": [
+                        {
+                            "system": "http://loinc.org",
+                            "code": "85069-3",
+                            "display": "CR X-Ray Thorax AP / PA"
+                        }
+                    ],
+                    "text": "CR X-Ray Thorax AP / PA"
+                },
+                "subject": {
+                    "reference": "Patient/P00999983243",
+                    "display": "ALICIA CHRISTIE TAN"
+                },
+                "encounter": {
+                    "reference": "Encounter/ENC-0012345",
+                    "display": "Kunjungan Rawat Jalan"
+                },
+                "requester": {
+                    "reference": "Practitioner/10016286016",
+                    "display": "dr. Hendrik Salim, Sp.PD"
+                },
+                "performer": [
+                    {
+                        "reference": "Practitioner/10016286016",
+                        "display": "dr. Hendrik Salim, Sp.PD"
                     }
                 ],
                 "locationCode": [
@@ -56,25 +123,7 @@
                         ]
                     }
                 ],
-                "subject": {
-                    "reference": "Patient/P-100200300",
-                    "display": "Budi Santoso"
-                },
-                "requester": {
-                    "reference": "Practitioner/DR-001",
-                    "display": "dr. Hendrik Salim, Sp.PD"
-                },
-                "code": {
-                    "coding": [
-                        {
-                            "code": "85069-3",
-                            "display": "CR X-Ray Thorax AP / PA",
-                            "system": "http://loinc.org"
-                        }
-                    ],
-                    "text": "CR X-Ray Thorax AP / PA"
-                },
-                "occurrenceDateTime": "2026-09-29T08:30:00+07:00"
+                "occurrenceDateTime": "2026-09-30T08:30:00+07:00"
             }
         }
     ]
