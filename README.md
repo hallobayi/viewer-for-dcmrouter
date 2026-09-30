@@ -5,5 +5,5 @@ Cara menggunakan
 4. Buka browser dan arahkan ke  http://localhost:5100/
 
 Cara integrasi simrs dengan modality
-1. Kirim payload fhir bundle ke
+1. Kirim payload fhir bundle ke http://localhost:5100/api/fhir # ganti localhost sesuai IP komputer
 2. Lakukan query (f-find) dari alat ke port 5200
